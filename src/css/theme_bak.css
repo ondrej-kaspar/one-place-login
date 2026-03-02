@@ -1,0 +1,167 @@
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-neutral-100: #f8fafc;
+  --color-neutral-200: #dbdddf;
+  --color-neutral-300: #bec0c1;
+  --color-neutral-400: #a1a2a4;
+  --color-neutral-500: #848587;
+  --color-neutral-600: #676869;
+  --color-neutral-700: #4a4b4c;
+  --color-neutral-800: #2d2d2e;
+  --color-neutral-900: #101011;
+  
+  --color-primary-100: #e2edfd;
+  --color-primary-200: #aac5f7;
+  --color-primary-300: #719ef2;
+  --color-primary-400: #3960ec;
+  --color-primary-500: #0032e6;
+  --color-primary-600: #0328b9;
+  --color-primary-700: #051e8c;
+  --color-primary-800: #08145f;
+  --color-primary-900: #0a0a32;
+
+  --color-midnight: #0d1846;
+
+  --color-sky: #4ca3ff;
+  --color-sky-250: #9ad8fe;
+  --color-sky-300: #86d0fe;
+  --color-sky-350: #72c8fe;
+
+  --color-sunset: #ff7c33;
+
+  --color-system-error: var(--color-sunset);
+
+  --color-text-primary: var(--color-neutral-400);
+
+  --color-btn-bg-hover: #363a47;
+
+  --color-link-primary: var(--color-sky-250);
+  --color-link-primary-hover: var(--color-sky-350);
+
+  --gradient-dark-sky: to bottom, var(--color-midnight), var(--color-sky);
+  --gradient-dark-sunset: to bottom, var(--color-midnight), var(--color-sunset);
+  --gradient-sky-light: to bottom, var(--color-sky), var(--color-white);
+  --gradient-sunset-light: to bottom, var(--color-sunset), var(--color-white);
+
+  --font-sans: "GT America", sans-serif;
+  --font-serif: "HW Cigars", serif;
+
+  --shadow-100: 0 0 4px 2px color-mix(in srgb, var(--color-sky) 40%, transparent);
+  --shadow-200: 0 0 6px 3px color-mix(in srgb, var(--color-sky) 50%, transparent);
+  --shadow-300: 0 0 8px 4px color-mix(in srgb, var(--color-sky) 40%, transparent);
+  --shadow-400: 0 0 8px 4px color-mix(in srgb, var(--color-sky) 60%, transparent);
+
+  --shadow-btn-xs: 0 -2px 13px 0 var(--color-sky);
+  --shadow-btn-sm: 0 -2px 13px 1px var(--color-sky);
+  --shadow-btn: 0 -2px 17px 3px var(--color-sky);
+  --shadow-btn-lg: 0 -4px 18px 4px var(--color-sky);
+  --shadow-btn-xl: 0 -4px 18px 4px var(--color-sky);
+
+  --inset-shadow-btn-xs: 0 -2px 13px 0 var(--color-sky) inset;
+  --inset-shadow-btn-sm: 0 -2px 13px 1px var(--color-sky) inset;
+  --inset-shadow-btn: 0 -2px 17px 3px var(--color-sky) inset;
+  --inset-shadow-btn-lg: 0 -4px 18px 4px var(--color-sky) inset;
+  --inset-shadow-btn-xl: 0 -4px 18px 4px var(--color-sky) inset;
+
+
+  /* ABMLA - DELETE LATER */
+
+  /*
+  --color-blue-900: #0a369d;
+  --color-sky-500: #26a9fc;
+  --color-purple-400: #c873ff;
+  --color-pink-400: #ff4dd2;
+  --color-zinc-100: #f2f2f2;
+
+  --color-blue-500: #5283f4;
+  --color-blue-600: #2c67f2;
+  --color-blue-650: #0f4fe6;
+  --color-blue-700: #0d49d3;
+  --color-sky-250: #9ad8fe;
+  --color-sky-300: #86d0fe;
+  --color-sky-350: #72c8fe;
+  --color-sky-400: #5ec0fd;
+
+  --color-purple-200: #efd6ff;
+  --color-purple-250: #e7c2ff;
+  --color-purple-300: #deadff;
+  --color-purple-350: #d699ff;
+
+  --color-pink-200: #ffc2f0;
+  --color-pink-250: #ffadeb;
+  --color-pink-300: #ff99e5;
+  --color-pink-350: #ff85e0;
+  
+  --color-slate-200: #e2e9f2;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  
+  --color-egyptian-blue: var(--color-blue-900);
+  --color-argentinian-blue: var(--color-sky-500);
+  --color-heliotrope: var(--color-purple-400);
+  --color-purple-pizzazz: var(--color-pink-400);
+  --color-white-smoke: var(--color-zinc-100);
+
+  --color-system-error: var(--color-sunset);
+  
+  --color-page-bg: var(--color-primary-900);
+  --color-text-primary: var(--color-neutral-400);
+  
+  --color-btn-bg-hover: #363a47;
+
+  --color-link-primary: var(--color-sky-250);
+  --color-link-primary-hover: var(--color-sky-350);
+  --color-shadow: --alpha(var(--color-egyptian-blue) / 40%);
+  
+  --gradient-blue: to right, var(--color-egyptian-blue), var(--color-argentinian-blue);
+  --gradient-purple: to right, var(--color-heliotrope), var(--color-purple-pizzazz);
+  --gradient-brand: 20deg, var(--color-egyptian-blue) 30%, var(--color-argentinian-blue) 50%, var(--color-heliotrope) 70%, var(--color-purple-pizzazz) 95%;
+  
+  --radius-media: 1.25rem;
+  --radius-media-lg: 2rem;
+  
+   */
+  
+  --opacity-form-disabled: .5;
+
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2rem;
+  
+  --text-body-xl: var(--text-lg);
+  --text-body-lg: var(--text-md);
+  --text-body-md: var(--text-base);
+  --text-body-sm: var(--text-sm);
+  
+  --container-*: initial;
+  
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 37.5rem; /* 600px */
+  --breakpoint-md: 56.25rem; /* 900px */
+  --breakpoint-lg: 75rem; /* 1200px */
+  --breakpoint-xl: 93.75rem; /* 1500px */
+  --breakpoint-2xl: 112.5rem; /* 1800px */
+  --breakpoint-desktop-nav: 57.5rem; /* Update in nav.js and nav.css */
+  
+  --background-image-check: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m5.08 11.52-3.79-3.79-1.29 1.28 5.08 5.08 10.92-10.91-1.28-1.28z' fill='%234ca3ff' /%3E%3C/svg%3E");
+  --background-image-radio: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m8 13.3c2.9 0 5.3-2.4 5.3-5.3s-2.4-5.3-5.3-5.3-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3z' fill='%234ca3ff' /%3E%3C/svg%3E");
+  --background-image-select: url("data:image/svg+xml,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='m11.5 14.5-3.6-3.6s-.1-.1-.1-.2 0-.1 0-.2 0-.2.1-.4c0-.1.2-.1.3-.1h7.6c.1 0 .3.1.4.1.1.1.1.2.1.4 0 0-.1.1-.2.3l-3.6 3.6c-.1.1-.2.1-.2.2-.1 0-.2.1-.3.1s-.2 0-.3-.1c-.1 0-.1 0-.2-.1z' fill='%23aac5f7'/></svg>");
+  --background-image-arrow-circle: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3ClinearGradient id='a' gradientTransform='matrix(1 0 0 -1 0 19.5322)' gradientUnits='userSpaceOnUse' x1='8.2594' x2='13.8769' y1='4.7199' y2='20.2507'%3E%3Cstop offset='0' stop-color='%230a369d'/%3E%3Cstop offset='.3125' stop-color='%2326a9fc'/%3E%3Cstop offset='.6538' stop-color='%23c873ff'/%3E%3Cstop offset='1' stop-color='%23ff4dd2'/%3E%3C/linearGradient%3E%3Cpath clip-rule='evenodd' d='m10 1.5c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5 8.5-3.8 8.5-8.5-3.8-8.5-8.5-8.5zm-10 8.5c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10-10-4.5-10-10zm10.2-3.6c.3-.3.8-.3 1.1 0l3.1 3.1c.1.1.2.3.2.5s-.1.4-.2.5l-3.1 3.1c-.3.3-.8.3-1.1 0s-.3-.8 0-1.1l1.8-1.8h-5.8c-.4 0-.8-.3-.8-.8 0-.4.3-.8.8-.8h5.8l-1.8-1.8c-.3-.1-.3-.6 0-.9z' fill='url(%23a)' fill-rule='evenodd'/%3E%3C/svg%3E");
+  --background-image-arrow-right-primary: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 24 24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4.98 12.47v-.96h12.3l-3.54-3.44.66-.67 4.61 4.59-4.61 4.61-.67-.67 3.55-3.46z' fill='%230a0a32' /%3E%3C/svg%3E");
+
+}

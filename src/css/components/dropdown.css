@@ -1,0 +1,72 @@
+@layer components {
+    .dropdown {
+        @apply
+        relative;
+        
+        &__toggle {
+            @apply
+            flex
+            items-center
+            gap-1
+            cursor-pointer
+            outline-none
+            rounded
+            focus-visible:ring-offset-1
+            focus-visible:ring-2
+            focus-visible:ring-action-primary-default/75;
+            
+            &-indicator {
+                @apply
+                flex
+                h-4
+                pl-2
+                ml-2
+                text-action-primary-default
+                border-l
+                border-border-separator-default;
+            }
+            
+            &:hover {
+                .dropdown__toggle-indicator {
+                    @apply
+                    text-action-primary-hover;
+                }
+            }
+                
+            &::marker,
+            &::-webkit-details-marker {
+                @apply
+                hidden;
+            }
+        }
+        
+        &__body {
+            @apply
+            [--space:.5rem]
+            absolute
+            top-[calc(100%+var(--space))]
+            left-[calc(0px-var(--space))]
+            w-max
+            max-w-[320px]
+            p-2
+            text-sm
+            rounded-lg
+            bg-white
+            border
+            border-border-interactive-default
+            shadow-md;
+            
+            &--left {
+                @apply
+                left-auto
+                right-[calc(0px-var(--space))];
+            }
+            
+            &--up {
+                @apply
+                top-auto
+                bottom-[calc(100%+var(--space))];
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+@layer components {
+    .btn {
+        @apply
+        relative
+        inline-flex
+        items-center
+        justify-center
+        gap-x-2
+        px-8
+        print:px-4
+        py-2
+        rounded-full
+        text-sm
+        font-medium
+        leading-[1.25rem]
+        tracking-[.05em]
+        text-center
+        no-underline
+        border
+        border-transparent
+        outline-none
+        enabled:cursor-pointer
+        ring-offset-1
+        transition-all
+        focus-visible:ring-2
+        focus-visible:ring-action-primary-default/75
+        disabled:text-action-primary-disabled;
+        
+        &:is(a) {}
+
+        &.btn--disabled {
+            @apply
+            text-action-primary-disabled
+            pointer-events-none;
+        }
+
+        &--primary {
+            @apply
+            text-white
+            bg-action-primary-default
+            border-action-primary-default
+            enabled:hover:text-white
+            enabled:hover:bg-action-primary-hover
+            enabled:hover:border-action-primary-hover
+            active:text-white
+            active:bg-action-primary-active
+            active:border-action-primary-active
+            focus-visible:ring-action-primary-default/75
+            disabled:text-action-primary-disabled
+            disabled:bg-background-basic-disabled
+            disabled:border-background-basic-disabled;
+
+            &:is(a) {
+                @apply
+                hover:text-white
+                hover:bg-action-primary-hover
+                hover:border-action-primary-hover;
+            }
+
+            &.btn--disabled {
+                @apply
+                bg-background-basic-disabled
+                border-background-basic-disabled;
+            }
+        }
+        
+        &--secondary {
+            @apply
+            text-action-primary-default
+            bg-background-cover-default
+            border-action-primary-default
+            focus-visible:ring-action-primary-default/75
+            enabled:hover:text-action-primary-hover
+            enabled:hover:border-action-primary-hover
+            active:text-action-primary-active
+            active:border-action-primary-active
+            disabled:text-action-primary-disabled
+            disabled:border-background-basic-disabled;
+    
+            &:is(a) {
+                @apply
+                hover:text-action-primary-hover
+                hover:border-action-primary-hover;
+            }
+    
+            &.btn--disabled {
+                @apply
+                text-action-primary-disabled
+                border-background-basic-disabled;
+            }
+        }
+
+        &--secondary-text {
+            @apply
+            text-action-primary-default
+            bg-background-cover-default
+            border-transparent
+            focus-visible:ring-action-primary-default/75
+            enabled:hover:text-action-primary-hover
+            active:text-action-primary-active
+            disabled:text-action-primary-disabled;
+
+            &:is(a) {
+                @apply
+                hover:text-action-primary-hover;
+            }
+
+            &.btn--disabled {
+                @apply
+                text-action-primary-disabled;
+            }
+        }
+
+        > .icon,
+        > span > .icon {
+            @apply
+            text-base;
+
+            &:first-child {
+                @apply
+                -ml-4;
+            }
+            
+            &:last-child {
+                @apply
+                -mr-4;
+            }
+        }
+    }
+
+    .no-btn {
+        @apply
+        min-h-0
+        p-0
+        rounded-sm;
+    }
+}

@@ -1,0 +1,29 @@
+@layer components {
+    .login {
+        @apply
+        min-h-screen
+        md:grid
+        md:grid-cols-2;
+            
+        &__header {
+            @apply
+            flex
+            flex-col
+            gap-6
+            bg-brand-primary
+            text-white
+            px-6
+            py-8
+            md:p-16;
+        }
+        
+        &__body {
+            @apply
+            relative
+            bg-white
+            px-6
+            py-16
+            md:px-16;
+        }
+    }
+}

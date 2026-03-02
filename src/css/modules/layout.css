@@ -1,0 +1,41 @@
+.container {
+    @apply
+    [--container-space-x:calc((100vw_-_var(--scrollbar-width,_0px)_-_var(--container-width,100%))_*_.5)]
+    [--container-max-width:88rem]
+    xl:[--container-max-width:92rem]
+    [--container-padding-x:1.5rem]
+    md:[--container-padding-x:3rem]
+    xl:[--container-padding-x:6rem]
+
+    max-w-[var(--container-max-width)]
+    mx-auto
+    px-[var(--container-padding-x)];
+    
+    &--sm {
+        @apply
+        max-w-[52rem];
+    }
+
+    &--md {
+        @apply
+        max-w-[65rem];
+    }
+
+    &--lg {
+        @apply
+        max-w-[78rem];
+    }
+
+    &--full {
+        @apply
+        max-w-[120rem];
+    }
+
+    .-mx-container {
+        margin-inline: calc(max(var(--container-padding-x), var(--container-space-x)) * -1);
+    }
+
+    .px-container {
+        padding-inline: max(var(--container-padding-x), var(--container-space-x));
+    }
+}

@@ -1,0 +1,29 @@
+@layer components {
+    .option-list {
+        @apply
+        flex
+        flex-col
+        gap-0.5;
+        
+        &__item {
+            > a,
+            > button {
+                @apply
+                flex
+                gap-3
+                items-center
+                px-3
+                py-2
+                text-text-secondary
+                rounded
+                transition-colors
+                hover:text-text-primary
+                hover:bg-background-basic-hover
+                active:bg-background-basic-active
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-action-primary-default/75;
+            }
+        }
+    }
+}

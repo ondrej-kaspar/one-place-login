@@ -1,0 +1,41 @@
+{
+  "name": "arnold-login",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run css:build && npm run css:minify && npm run js:compile && npm run js:minify",
+    "dev": "npm run css:watch && npm run js:watch && npm run browser-sync",
+    "css:build": "postcss src/css/main.css -o dist/css/main.css --map",
+    "css:watch": "postcss src/css/main.css -o dist/css/main.css --map --watch --verbose",
+    "css:minify": "cross-env MINIFY=true postcss dist/css/main.css -o dist/css/main.min.css --map",
+    "js:compile": "rollup --config rollup.config.mjs",
+    "js:watch": "npm run js:compile -- --watch",
+    "js:minify": "terser dist/js/main.js -o dist/js/main.min.js --compress --source-map",
+    "icons:sprite": "svgstore -o dist/img/icons.svg src/icons/*.svg",
+    "icons:copy": "cpy src/icons/**/* dist/icons --parents",
+    "browser-sync": "browser-sync start --proxy \"https://LOCALHOST/templates/\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-multi-entry": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@tailwindcss/postcss": "^4.1.7",
+    "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.4",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-nested": "^7.0.2",
+    "rollup": "^4.44.1",
+    "rollup-plugin-import-css": "^4.0.1",
+    "svgstore-cli": "^2.0.1",
+    "tailwindcss": "^4.2.1",
+    "terser": "^5.43.1"
+  }
+}

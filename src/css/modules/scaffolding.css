@@ -1,0 +1,37 @@
+@layer base {
+    :root {
+    }
+    
+    html {
+        @apply
+        text-base;
+    }
+
+    body {
+        @apply
+        font-sans
+        text-sm
+        leading-[1.5]
+        tracking-normal
+        text-text-primary
+        bg-white
+        overflow-x-hidden;
+    }
+
+    a {
+        @apply
+        transition-colors
+        duration-150;
+        
+        &:hover {}
+
+        &:active {}
+    }
+    
+    * {
+        /*
+        @apply
+        scroll-mt-(--header-height);
+        */
+    }
+}

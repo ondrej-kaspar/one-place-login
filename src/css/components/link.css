@@ -1,0 +1,24 @@
+@layer components {
+    .link {
+        &-primary {
+            @apply
+            text-action-primary-default
+            font-medium
+            hover:text-action-primary-hover;
+            
+            &-inverted {
+                @apply
+                text-text-primary
+                opacity-50
+                font-medium
+                hover:opacity-75;
+            }
+        }
+
+        &-stretched {
+            @apply
+            before:absolute
+            before:inset-0;
+        }
+    }
+}

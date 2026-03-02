@@ -1,0 +1,9 @@
+@layer components {
+    .actions {
+        @apply
+        flex
+        flex-wrap
+        gap-x-6
+        gap-y-6;
+    }
+}

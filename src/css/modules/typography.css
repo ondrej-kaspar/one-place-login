@@ -1,0 +1,330 @@
+@layer base {
+    /*
+    @font-face {
+        font-family: 'HW Cigars';
+        src: url('../fonts/hw-cigars-slim.woff2') format('woff2');
+        font-weight: 200;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'HW Cigars';
+        src: url('../fonts/hw-cigars-light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'HW Cigars';
+        src: url('../fonts/hw-cigars-regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'HW Cigars';
+        src: url('../fonts/hw-cigars-medium.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+    }
+    */
+    
+    /*
+    Fluid type
+    https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp/ 
+    
+    slope = (48px - 20px) / (1200px - 400px) = 28px / 800px = 0.035
+    b = 20px - 0.035(400px) = 20px - 14px = 6px
+    font-size: max(20px, 3.5vw + 6px);
+    font-size: clamp(20px, 3.5vw + 6px, 48px);
+    */
+
+    :root {
+        --fluid-from-screen: 360; /* px */
+        --fluid-to-screen: 1920; /* px */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    div,
+    ul,
+    ol,
+    a,
+    span,
+    button,
+    label,
+    input,
+    select,
+    textarea,
+    .textarea-grow::after {
+        --fluid-type-slope: calc(
+                (var(--text-to) - var(--text-from)) /
+                (var(--fluid-to-screen) - var(--fluid-from-screen))
+        );
+        --fluid-type-y-intercept: calc(
+                (var(--text-from) - var(--fluid-type-slope) * var(--fluid-from-screen)) / 16 * 1rem
+        );
+
+        /* min - infinity */
+        /*
+        font-size: max(
+                calc(var(--text-from) / 16 * 1rem),
+                calc(var(--fluid-type-slope) * 100vw) + var(--fluid-type-y-intercept)
+        );
+        */
+
+        /* min - max */
+        font-size: clamp(
+            calc(var(--text-from) / 16 * 1rem),
+            calc(var(--fluid-type-slope) * 100vw) + var(--fluid-type-y-intercept),
+            calc(var(--text-to) / 16 * 1rem)
+        );
+    }
+
+    .fixed-type {
+        &,
+        * {
+            font-size: inherit;
+        }
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+        @apply
+        leading-[1.2];
+    }
+
+    .display-lg {
+        @apply
+        [--text-from:22]
+        [--text-to:38]
+        font-heading
+        leading-[1.2]
+        font-bold
+        text-balance;
+    }
+
+    .heading-xl {
+        @apply
+        font-sans
+        text-heading-xl
+        leading-[1.2]
+        font-bold
+        text-balance;
+    }
+
+    .heading-lg {
+        @apply
+        font-sans
+        text-heading-lg
+        leading-[1.2]
+        font-light
+        text-balance;
+
+        &.bold {
+            @apply
+            font-medium;
+        }
+    }
+
+    .heading-md {
+        @apply
+        font-sans
+        text-heading-md
+        leading-[1.2]
+        font-normal
+        text-balance;
+
+        &.bold {
+            @apply
+            font-bold;
+        }
+    }
+
+    .heading-sm {
+        @apply
+        font-sans
+        text-heading-sm
+        leading-[1.2]
+        font-medium
+        text-balance;
+    }
+
+    .body-xl {
+        @apply
+        text-body-xl;
+    }
+
+    .body-lg {
+        @apply
+        text-body-lg;
+    }
+
+    .body-md {
+        @apply
+        text-body-md;
+    }
+
+    .body-sm {
+        @apply
+        text-body-sm;
+    }
+
+    /*
+    :where(.wysiwyg) .display,
+    .display {
+        @apply
+        [--text-from:52]
+        [--text-to:104]
+        font-serif
+        font-light
+        leading-[1.3]
+        text-balance
+        mb-[.5em];
+    }
+    :where(.wysiwyg) :is(.display) {
+        @apply
+        mt-[1em];
+    }
+    */
+
+    /*
+    :where(.wysiwyg) h1,
+    .h1 {
+        @apply
+        [--text-from:52]
+        [--text-to:103]
+        font-serif
+        font-light
+        leading-[1.1]
+        tracking-[-.02em]
+        text-balance
+        mb-[.25em];
+    }
+    :where(.wysiwyg) :is(h1, .h1) {
+        @apply
+        mt-[.5em];
+    }
+
+    :where(.wysiwyg) h2,
+    .h2 {
+        @apply
+        [--text-from:46]
+        [--text-to:72]
+        font-serif
+        font-light
+        leading-[1.1]
+        tracking-[-.01em]
+        text-balance
+        mb-[.66em];
+    }
+    :where(.wysiwyg) :is(h2, .h2) {
+        @apply
+        mt-[1em];
+    }
+
+    :where(.wysiwyg) h3,
+    .h3 {
+        @apply
+        [--text-from:28]
+        [--text-to:32]
+        font-sans
+        font-medium
+        leading-[1.2]
+        text-balance
+        mb-[.75em];
+    }
+    :where(.wysiwyg) :is(h3, .h3) {
+        @apply
+        mt-[1em];
+    }
+
+    :where(.wysiwyg) h4,
+    .h4 {
+        @apply
+        [--text-from:24]
+        [--text-to:28]
+        font-sans
+        font-normal
+        leading-[1.2]
+        mb-[.75em];
+    }
+    :where(.wysiwyg) :is(h4, .h4) {
+        @apply
+        mt-[1em];
+    }
+
+    :where(.wysiwyg) h5,
+    .h5 {
+        @apply
+        [--text-from:20]
+        [--text-to:24]
+        font-sans
+        font-medium
+        leading-[1.5]
+        mb-[.75em];
+    }
+    :where(.wysiwyg) :is(h5, .h5) {
+        @apply
+        mt-[1em];
+    }
+
+    :where(.wysiwyg) h6,
+    .h6 {
+        @apply
+        [--text-from:18]
+        [--text-to:20]
+        font-sans
+        font-medium
+        leading-[1.5]
+        mb-[.75em];
+    }
+    :where(.wysiwyg) :is(h6, .h6) {
+        @apply
+        mt-[1em];
+    }
+    
+    .body-xl {
+        @apply
+        font-sans
+        text-body-xl;
+    }
+    .body-lg {
+        @apply
+        font-sans
+        text-body-lg;
+    }
+    .body-md {
+        @apply
+        font-sans
+        text-body-md;
+    }
+    .body-sm {
+        @apply
+        font-sans
+        text-body-sm;
+    }
+    */
+    
+    /*
+    
+    Heading/XLarge--Mobile
+    Quicksand / 38px / 700
+    
+    Heading/Medium--Default
+    Roboto / 22px / 400
+    
+     */
+}
