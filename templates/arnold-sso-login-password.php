@@ -4,7 +4,7 @@ require_once ('includes/templates.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?= renderHead(['title' => 'New password']); ?></head>
+<?= renderHead(['title' => 'Login using password']); ?></head>
 <body>
 
 <div class="login">
@@ -22,11 +22,36 @@ require_once ('includes/templates.php');
       <div class="size-20 flex items-center justify-center mx-auto mb-2">
         <img src="/dist/img/lock.svg" alt="" width="64" height="64">
       </div>
-      <h2 class="heading-md text-center">Napiš nové heslo</h2>
-      <p class="text-text-secondary text-center">Na email <strong>michal.klimt@almamedia.com</strong> jsme ti odeslali odkaz, přes který si nastavíš nové heslo. Pokud email nepřišel, můžeš si ho poslat znovu za <strong>10 vteřin</strong>.</p>
-      <div>
-        <button type="submit" class="btn btn--secondary-text w-full">Odeslat email znovu</button>
+      <h2 class="heading-md text-center">Přihlášení pomocí hesla</h2>
+      <div class="grid gap-4">
+        <div class="form-group">
+          <label for="login" class="form-label">E-mail</label>
+          <input type="text" class="form-control" id="login" value="michal.klimt@almacareer.com">
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Heslo</label>
+          <div class="form-control-wrapper">
+            <input type="password" class="form-control" id="password">
+            <button type="button" class="form-control-action" data-reveal="off">
+                <?= icon('visibility-on', ['class' => 'on']); ?>
+                <?= icon('visibility-off', ['class' => 'off']); ?>
+            </button>
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn--primary w-full">Potvrdit heslo</button>
+        </div>
+        <div>
+          <a href="#" class="btn btn--secondary-text w-full">Nastavit nové heslo</a>
+        </div>
       </div>
+    </div>
+    
+    <div class="absolute left-6 top-4">
+      <a href="arnold-sso-login-email.php" class="btn btn--secondary-text px-2">
+          <?= icon('chevron-left'); ?>
+        Zpět
+      </a>
     </div>
     
     <details class="dropdown absolute right-6 top-4">

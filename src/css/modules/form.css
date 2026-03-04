@@ -62,7 +62,8 @@
         outline-none
         ring-offset-1
         focus-visible:ring-2
-        focus-visible:ring-action-primary-default/75;
+        focus-visible:ring-action-primary-default/75
+        disabled:text-text-secondary;
     }
     
     .form-control-action {

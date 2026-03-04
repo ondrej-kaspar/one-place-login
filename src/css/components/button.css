@@ -116,6 +116,7 @@
             @apply
             text-base;
 
+            /*
             &:first-child {
                 @apply
                 -ml-4;
@@ -125,6 +126,7 @@
                 @apply
                 -mr-4;
             }
+            */
         }
     }
 

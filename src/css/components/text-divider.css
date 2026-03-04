@@ -1,0 +1,14 @@
+@layer components {
+    .text-divider {
+        @apply
+        flex
+        items-center
+        gap-2
+        before:flex-1
+        before:border-b
+        before:border-b-border-separator-default
+        after:flex-1
+        after:border-b
+        after:border-b-border-separator-default;
+    }
+}

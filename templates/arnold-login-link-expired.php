@@ -32,7 +32,7 @@ require_once ('includes/templates.php');
     </div>
     
     <details class="dropdown absolute right-6 top-4">
-      <summary class="dropdown__toggle">
+      <summary class="dropdown__toggle p-[9px]">
         <img src="https://borderly.dev/flag/circle/cz.svg" alt="Czech" width="20" height="20">
         <span class="dropdown__toggle-indicator">
             <?= icon('chevron-down', ['class' => 'text-[1.25rem]']); ?>

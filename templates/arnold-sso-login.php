@@ -4,7 +4,7 @@ require_once ('includes/templates.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?= renderHead(['title' => 'New password']); ?></head>
+<?= renderHead(['title' => 'SSO Login']); ?></head>
 <body>
 
 <div class="login">
@@ -20,12 +20,21 @@ require_once ('includes/templates.php');
   <div class="login__body">
     <div class="grid gap-6 max-w-[440px] mx-auto">
       <div class="size-20 flex items-center justify-center mx-auto mb-2">
-        <img src="/dist/img/lock.svg" alt="" width="64" height="64">
+        <img src="/dist/img/mail.svg" alt="" width="64" height="64">
       </div>
-      <h2 class="heading-md text-center">Napiš nové heslo</h2>
-      <p class="text-text-secondary text-center">Na email <strong>michal.klimt@almamedia.com</strong> jsme ti odeslali odkaz, přes který si nastavíš nové heslo. Pokud email nepřišel, můžeš si ho poslat znovu za <strong>10 vteřin</strong>.</p>
-      <div>
-        <button type="submit" class="btn btn--secondary-text w-full">Odeslat email znovu</button>
+      <h2 class="heading-md text-center">Zadej tvůj e-mail</h2>
+      <div class="grid gap-4">
+        <div class="form-group">
+          <label for="login" class="form-label">E-mail</label>
+          <input type="text" class="form-control" id="login">
+        </div>
+        <div>
+          <button type="submit" class="btn btn--primary w-full">Přihlášení</button>
+        </div>
+        <p class="text-text-secondary text-center body-sm">Nebo</p>
+        <div>
+          <button type="submit" class="btn btn--secondary w-full">Rychlé přihlášení e-mailem</button>
+        </div>
       </div>
     </div>
     

@@ -21,6 +21,9 @@ require_once ('./includes/templates.php');
     <li><a href="arnold-login-new-password.php">New password</a></li>
     <li><a href="arnold-login-new-password-input.php">New password - input</a></li>
     <li><a href="arnold-login-create-account.php">Create account</a></li>
+    <li><a href="arnold-sso-login.php">SSO Login</a></li>
+    <li><a href="arnold-sso-login-email.php">SSO Login - email</a></li>
+    <li><a href="arnold-sso-login-password.php">SSO Login - password</a></li>
   </ul>
   
   <hr hidden>
