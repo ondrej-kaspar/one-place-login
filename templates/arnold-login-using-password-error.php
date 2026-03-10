@@ -19,7 +19,7 @@ require_once ('includes/templates.php');
   </div>
   <div class="login__body">
     <div class="grid gap-6 max-w-[440px] mx-auto">
-      <div class="size-20 flex items-center justify-center mx-auto mb-2">
+      <div class="size-20 flex items-center justify-center mx-auto mb-2 bg-background-basic-default rounded-full">
         <img src="/dist/img/lock.svg" alt="" width="64" height="64">
       </div>
       <h2 class="heading-md text-center">Přihlášení pomocí hesla</h2>
