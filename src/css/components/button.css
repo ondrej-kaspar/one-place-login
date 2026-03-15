@@ -20,10 +20,9 @@
         border-transparent
         outline-none
         enabled:cursor-pointer
-        ring-offset-1
         transition-all
-        focus-visible:ring-2
-        focus-visible:ring-action-primary-default/75
+        focus-visible:ring-3
+        focus-visible:ring-action-primary-default/25
         disabled:text-action-primary-disabled;
         
         &:is(a) {}
@@ -45,7 +44,7 @@
             active:text-white
             active:bg-action-primary-active
             active:border-action-primary-active
-            focus-visible:ring-action-primary-default/75
+            focus-visible:ring-action-primary-default/25
             disabled:text-action-primary-disabled
             disabled:bg-background-basic-disabled
             disabled:border-background-basic-disabled;
@@ -69,7 +68,7 @@
             text-action-primary-default
             bg-background-cover-default
             border-action-primary-default
-            focus-visible:ring-action-primary-default/75
+            focus-visible:ring-action-primary-default/25
             enabled:hover:text-action-primary-hover
             enabled:hover:border-action-primary-hover
             active:text-action-primary-active
@@ -95,7 +94,7 @@
             text-action-primary-default
             bg-background-cover-default
             border-transparent
-            focus-visible:ring-action-primary-default/75
+            focus-visible:ring-action-primary-default/25
             enabled:hover:text-action-primary-hover
             active:text-action-primary-active
             disabled:text-action-primary-disabled;

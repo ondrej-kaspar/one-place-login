@@ -21,8 +21,14 @@
                 hover:bg-background-basic-hover
                 active:bg-background-basic-active
                 focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-action-primary-default/75;
+                focus-visible:ring-3
+                focus-visible:ring-action-primary-default/25;
+            }
+            
+            &--disabled {
+                @apply
+                opacity-50
+                pointer-events-none;
             }
         }
     }

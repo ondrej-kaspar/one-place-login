@@ -18,6 +18,8 @@ function renderHead($props = [])
   
   <script src="/dist/js/main.js{$version}"></script>
   
+  <link rel="shortcut icon" href="/dist/img/favicon.png">
+  
   <title>{$title} | One Place Login - Arnold</title>
 
 HTML;

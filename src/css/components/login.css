@@ -2,8 +2,8 @@
     .login {
         @apply
         min-h-screen
-        md:grid
-        md:grid-cols-2;
+        sm:grid
+        sm:grid-cols-2;
             
         &__header {
             @apply
@@ -12,9 +12,10 @@
             gap-6
             bg-brand-primary
             text-white
-            px-6
-            py-8
-            md:p-16;
+            px-[28px]
+            py-[25px]
+            sm:py-[8%]
+            sm:px-[calc(1rem+8%)];
         }
         
         &__body {
@@ -23,7 +24,27 @@
             bg-white
             px-6
             py-16
-            md:px-16;
+            sm:px-16
+            sm:pt-22;
+            
+            &-content {
+                @apply
+                grid
+                gap-6
+                max-w-[352px]
+                xl:max-w-[464px]
+                mx-auto;
+            }
+        }
+        
+        &__title {
+            @apply
+            font-heading
+            text-[22px]
+            leading-[1.2]
+            font-normal
+            sm:text-[48px]
+            sm:font-semibold;
         }
     }
 }

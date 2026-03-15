@@ -10,13 +10,16 @@ require_once ('includes/templates.php');
 <div class="login">
   <div class="login__header">
     <div class="flex items-center max-md:justify-center gap-4 md:gap-6 md:flex-col md:items-start">
-      <a href="index.php" class="shrink-0"><img src="/dist/img/arnold-logo-bubble.svg" alt="" class="w-10 md:w-14 lg:w-18"></a>
-      <h1 class="display-lg">Vyzkoušejte si Arnolda zdarma</h1>
+      <a href="index.php" class="shrink-0"><img src="/dist/img/arnold-logo-bubble.svg" alt="" class="w-10 md:w-14 lg:w-20"></a>
+      <div class="max-w-[300px]">
+        <!--      <h1 class="display-lg">Vyzkoušejte si Arnolda zdarma</h1>-->
+        <h1 class="display-lg md:mt-4">Přihlas se do Arnolda</h1>
+      </div>
     </div>
-    <div class="body-sm max-md:hidden">
+    <div class="max-md:hidden">
       <p class="mb-3">Vedu se zaměstnanci pravidelný dialog formou krátkých a interaktivních konverzací.</p>
       <p>Jednoduše vyplňte formulář a nastavte si pro sebe a pro vaše týmy témata konverzací. Můžete si vybrat hned z několika témat a po ukončení interakce se zaměstnancem obdržíte report s vyhodnocením.</p>
-      <div class="mt-6 flex gap-2 flex-wrap body-sm">
+      <div class="mt-6 flex gap-2 flex-wrap">
         <p>Potřebujete vědět víc?</p>
         <p><a href="#" class="link-primary-inverted">Podívejte se na Arnoldův web</a></p>
       </div>
@@ -26,7 +29,7 @@ require_once ('includes/templates.php');
     </div>
   </div>
   <div class="login__body">
-    <div class="grid gap-6 max-w-[440px] mx-auto">
+    <div class="login__body-content">
       <div class="size-20 flex items-center justify-center mx-auto mb-2 bg-background-basic-default rounded-full">
         <img src="/dist/img/add-account.svg" alt="" width="64" height="64">
       </div>
@@ -91,25 +94,31 @@ require_once ('includes/templates.php');
       </div>
     </div>
     
-    <details class="dropdown absolute right-6 top-4">
-      <summary class="dropdown__toggle p-[9px]">
-        <img src="https://borderly.dev/flag/circle/cz.svg" alt="Czech" width="20" height="20">
+    <details class="dropdown language-select">
+      <summary class="dropdown__toggle">
+        <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
         <span class="dropdown__toggle-indicator">
-            <?= icon('chevron-down', ['class' => 'text-[1.25rem]']); ?>
+            <?= icon('chevron-down', ['class' => 'text-[1rem]']); ?>
           </span>
       </summary>
       <div class="dropdown__body dropdown__body--left">
         <ul class="option-list">
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/gb.svg" alt="English" width="20" height="20">
-              English
+              <img src="/dist/img/flag-gb.svg" alt="English" width="22" height="22">
+              anglicky
+            </a>
+          </li>
+          <li class="option-list__item option-list__item--disabled">
+            <a href="#">
+              <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
+              česky
             </a>
           </li>
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/sk.svg" alt="Slovak" width="20" height="20">
-              Slovak
+              <img src="/dist/img/flag-sk.svg" alt="Slovak" width="22" height="22">
+              slovensky
             </a>
           </li>
         </ul>

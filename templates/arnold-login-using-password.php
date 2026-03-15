@@ -18,7 +18,7 @@ require_once ('includes/templates.php');
     </div>
   </div>
   <div class="login__body">
-    <div class="grid gap-6 max-w-[440px] mx-auto">
+    <div class="login__body-content">
       <div class="size-20 flex items-center justify-center mx-auto mb-2 bg-background-basic-default rounded-full">
         <img src="/dist/img/lock.svg" alt="" width="64" height="64">
       </div>
@@ -51,25 +51,31 @@ require_once ('includes/templates.php');
       </div>
     </div>
     
-    <details class="dropdown absolute right-6 top-4">
-      <summary class="dropdown__toggle p-[9px]">
-        <img src="https://borderly.dev/flag/circle/cz.svg" alt="Czech" width="20" height="20">
+    <details class="dropdown language-select">
+      <summary class="dropdown__toggle">
+        <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
         <span class="dropdown__toggle-indicator">
-            <?= icon('chevron-down', ['class' => 'text-[1.25rem]']); ?>
+            <?= icon('chevron-down', ['class' => 'text-[1rem]']); ?>
           </span>
       </summary>
       <div class="dropdown__body dropdown__body--left">
         <ul class="option-list">
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/gb.svg" alt="English" width="20" height="20">
-              English
+              <img src="/dist/img/flag-gb.svg" alt="English" width="22" height="22">
+              anglicky
+            </a>
+          </li>
+          <li class="option-list__item option-list__item--disabled">
+            <a href="#">
+              <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
+              česky
             </a>
           </li>
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/sk.svg" alt="Slovak" width="20" height="20">
-              Slovak
+              <img src="/dist/img/flag-sk.svg" alt="Slovak" width="22" height="22">
+              slovensky
             </a>
           </li>
         </ul>

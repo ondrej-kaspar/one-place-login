@@ -109,11 +109,14 @@
     .display-lg {
         @apply
         [--text-from:22]
-        [--text-to:38]
+        [--text-to:48]
         font-heading
         leading-[1.2]
-        font-bold
-        text-balance;
+        font-semibold
+        /*
+        text-balance
+        */
+        ;
     }
 
     .heading-xl {

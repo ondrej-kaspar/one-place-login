@@ -9,22 +9,36 @@ require_once ('includes/templates.php');
 
 <div class="login">
   <div class="login__header">
-    <div class="flex items-center max-md:justify-center gap-4 md:gap-6">
-      <a href="index.php" class="shrink-0"><img src="/dist/img/arnold-logo-bubble.svg" alt="" class="w-10 md:w-14 lg:w-18"></a>
-      <h1 class="display-lg">Přihlas se do&nbsp;Arnolda</h1>
+    <div class="flex items-center gap-6 sm:flex-col sm:items-start">
+      <a href="index.php" class="shrink-0"><img src="/dist/img/arnold-logo-bubble.svg" alt="" class="w-10 sm:w-20"></a>
+      <div class="max-w-[300px] sm:mt-4">
+        <h1 class="login__title">Přihlas se do Arnolda</h1>
+      </div>
     </div>
-    <div class="mt-auto p-3 max-md:hidden">
-      <img src="/dist/img/arnold-logo-white.svg" alt="" width="160" class="">
+    <div class="max-sm:hidden">
+      <div class="wysiwyg">
+        <p class="mb-6"><strong>Pro zobrazení dat je potřeba přihlášení</strong>, které lze dvěmi způsoby:</p>
+        <ul>
+          <li><strong>Pomocí hesla</strong> - klikněte na Přihlásit se a pokud nemáte heslo nastavené, klikněte na
+            <strong>Nastavit nové heslo</strong></li>
+          <li><strong>Pomocí ověřovacího odkazu</strong> - klikněte na Přihlásit se pomocí ověřovacího odkazu -
+            následně přijde do emailu link, po jehož prokliknutí budete automaticky přihlášení
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-auto pb-8 max-sm:hidden">
+      <img src="/dist/img/arnold-logo-white.svg" alt="" width="228" class="">
     </div>
   </div>
   <div class="login__body">
-    <div class="grid gap-6 max-w-[440px] mx-auto">
+    <div class="login__body-content">
       <div class="size-20 flex items-center justify-center mx-auto mb-2 bg-background-basic-default rounded-full">
         <img src="/dist/img/mail.svg" alt="" width="64" height="64">
       </div>
       <h2 class="heading-md text-center">Zadej tvůj e-mail</h2>
       <div class="grid gap-4">
-        <div class="form-group">
+        <div class="form-group mb-4">
           <label for="login" class="form-label">E-mail</label>
           <input type="text" class="form-control" id="login">
         </div>
@@ -43,25 +57,31 @@ require_once ('includes/templates.php');
       </div>
     </div>
     
-    <details class="dropdown absolute right-6 top-4">
-      <summary class="dropdown__toggle p-[9px]">
-        <img src="https://borderly.dev/flag/circle/cz.svg" alt="Czech" width="20" height="20">
+    <details class="dropdown language-select">
+      <summary class="dropdown__toggle">
+        <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
         <span class="dropdown__toggle-indicator">
-            <?= icon('chevron-down', ['class' => 'text-[1.25rem]']); ?>
+            <?= icon('chevron-down', ['class' => 'text-[1rem]']); ?>
           </span>
       </summary>
       <div class="dropdown__body dropdown__body--left">
         <ul class="option-list">
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/gb.svg" alt="English" width="20" height="20">
-              English
+              <img src="/dist/img/flag-gb.svg" alt="English" width="22" height="22">
+              anglicky
+            </a>
+          </li>
+          <li class="option-list__item option-list__item--disabled">
+            <a href="#">
+              <img src="/dist/img/flag-cs.svg" alt="Czech" width="22" height="22">
+              česky
             </a>
           </li>
           <li class="option-list__item">
             <a href="#">
-              <img src="https://borderly.dev/flag/circle/sk.svg" alt="Slovak" width="20" height="20">
-              Slovak
+              <img src="/dist/img/flag-sk.svg" alt="Slovak" width="22" height="22">
+              slovensky
             </a>
           </li>
         </ul>

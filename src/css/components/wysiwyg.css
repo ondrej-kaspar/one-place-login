@@ -1,0 +1,24 @@
+@layer components {
+    :where(.wysiwyg) {
+        :is(p) {
+            @apply
+            mb-4;
+        }
+        
+        :is(ul, ol) {
+            @apply
+            mb-4
+            pl-10;
+        }
+        
+        :is(ul) {
+            @apply
+            list-disc;
+        }
+
+        :is(ol) {
+            @apply
+            list-decimal;
+        }
+    }
+}

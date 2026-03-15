@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import "./safelist.css";
-
 @import "./theme.css";
 
 
@@ -19,3 +17,5 @@
 @import "./components/option-list.css";
 @import "./components/text-divider.css";
 @import "./components/login.css";
+@import "./components/wysiwyg.css";
+@import "./components/languge-select.css";
