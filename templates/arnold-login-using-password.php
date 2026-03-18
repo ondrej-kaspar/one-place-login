@@ -26,7 +26,10 @@ require_once ('includes/templates.php');
       <div class="grid gap-4">
         <div class="form-group">
           <label for="login" class="form-label">E-mail</label>
-          <input type="text" class="form-control" id="login" value="michal.klimt@almacareer.com">
+          <div class="form-control-wrapper">
+            <input type="text" class="form-control pr-18" id="login" value="michal.klimt@almacareer.com" disabled>
+            <a href="#" class="form-control-action body-sm mr-4">Change</a>
+          </div>
         </div>
         <div class="form-group">
           <label for="password" class="form-label">Heslo</label>

@@ -202,6 +202,7 @@
     --breakpoint-xs: 36rem;
     --background-image-check: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m5.9 11-2.8-2.8-1 1 3.7 3.7 8-8-.9-.9z' fill='%23fff'/%3E%3C/svg%3E");
     --background-image-radio: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m8 13.3c2.9 0 5.3-2.4 5.3-5.3s-2.4-5.3-5.3-5.3-5.3 2.4-5.3 5.3 2.4 5.3 5.3 5.3z' fill='%23fff'/%3E%3C/svg%3E");
+    --background-image-input-error: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23af4c62'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23af4c62' stroke='none'/%3E%3C/svg%3E");
   }
 }
 @layer base {
@@ -540,6 +541,9 @@
   }
   .mt-auto {
     margin-top: auto;
+  }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
   }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
@@ -953,14 +957,23 @@
   .bg-check {
     background-image: var(--background-image-check);
   }
+  .bg-input-error {
+    background-image: var(--background-image-input-error);
+  }
   .bg-\[length\:0\] {
     background-size: 0;
+  }
+  .bg-\[length\:18px\] {
+    background-size: 18px;
   }
   .bg-\[size\:1\.5rem\] {
     background-size: 1.5rem;
   }
   .bg-\[center_right_\.5rem\] {
     background-position: center right .5rem;
+  }
+  .bg-\[center_right_10px\] {
+    background-position: center right 10px;
   }
   .bg-center {
     background-position: center;
@@ -1062,6 +1075,9 @@
   }
   .pr-12 {
     padding-right: calc(var(--spacing) * 12);
+  }
+  .pr-18 {
+    padding-right: calc(var(--spacing) * 18);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -1225,6 +1241,9 @@
   }
   .text-wrap {
     text-wrap: wrap;
+  }
+  .text-\[\#3f3f3f\] {
+    color: #3f3f3f;
   }
   .text-action-primary-default {
     color: var(--color-action-primary-default);
@@ -1617,6 +1636,9 @@
   }
   .focus-visible\:border-border-main-active:focus-visible {
     border-color: var(--color-border-main-active);
+  }
+  .focus-visible\:border-emotion-danger-default:focus-visible {
+    border-color: var(--color-emotion-danger-default);
   }
   .focus-visible\:ring-1:focus-visible {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -2039,13 +2061,20 @@
   }
   .form-group--error .form-control {
     border-color: var(--color-emotion-danger-default);
+    background-image: var(--background-image-input-error);
+    background-size: 18px;
+    background-position: center right 10px;
+    background-repeat: no-repeat;
   }
   .form-group--error .form-control:focus-visible {
-    --tw-ring-color: color-mix(in srgb, #cc454d 75%, transparent);
+    border-color: var(--color-emotion-danger-default);
+  }
+  .form-group--error .form-control:focus-visible {
+    --tw-ring-color: color-mix(in srgb, #cc454d 25%, transparent);
   }
   @supports (color: color-mix(in lab, red, red)) {
     .form-group--error .form-control:focus-visible {
-      --tw-ring-color: color-mix(in oklab, var(--color-emotion-danger-default) 75%, transparent);
+      --tw-ring-color: color-mix(in oklab, var(--color-emotion-danger-default) 25%, transparent);
     }
   }
   .form-group--error .form-message {
@@ -2063,6 +2092,7 @@
     position: relative;
   }
   .form-control-wrapper .form-control:has(+ .form-control-action) {
+    background-image: none;
     padding-right: calc(var(--spacing) * 10);
   }
   .form-control {
@@ -2078,7 +2108,7 @@
     padding-block: calc(var(--spacing) * 2);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-    color: var(--color-text-primary);
+    color: #3f3f3f;
   }
   .form-control::-moz-placeholder {
     color: var(--color-text-secondary);

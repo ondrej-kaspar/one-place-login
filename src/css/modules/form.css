@@ -13,8 +13,13 @@
         &--error {
             .form-control {
                 @apply
+                bg-input-error
+                bg-[center_right_10px]
+                bg-[length:18px]
+                bg-no-repeat
                 border-emotion-danger-default
-                focus-visible:ring-emotion-danger-default/75;
+                focus-visible:border-emotion-danger-default
+                focus-visible:ring-emotion-danger-default/25;
             }
             
             .form-message {
@@ -39,7 +44,8 @@
         
         .form-control:has(+ .form-control-action) {
             @apply
-            pr-10;
+            pr-10
+            bg-none;
         }
     }
 
@@ -51,7 +57,7 @@
         px-4
         py-2
         text-sm
-        text-text-primary
+        text-[#3f3f3f]
         bg-white
         border
         border-border-main-default
