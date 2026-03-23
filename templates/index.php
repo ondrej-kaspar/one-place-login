@@ -24,6 +24,7 @@ require_once ('./includes/templates.php');
     <li><a href="arnold-sso-login.php">SSO Login</a></li>
     <li><a href="arnold-sso-login-email.php">SSO Login - email</a></li>
     <li><a href="arnold-sso-login-password.php">SSO Login - password</a></li>
+    <li><a href="arnold-error.php">400/500 Error</a></li>
   </ul>
   
   <hr hidden>
