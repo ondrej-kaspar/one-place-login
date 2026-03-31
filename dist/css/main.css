@@ -11,7 +11,7 @@
     --breakpoint-sm: 48rem;
     --breakpoint-md: 62rem;
     --breakpoint-lg: 75rem;
-    --breakpoint-xl: 87.5rem;
+    --breakpoint-xl: 90rem;
     --breakpoint-2xl: 96rem;
     --container-3xs: 16rem;
     --container-2xs: 18rem;
@@ -478,9 +478,9 @@
       max-width: 75rem;
     }
   }
-  @media (width >= 87.5rem) {
+  @media (width >= 90rem) {
     .container {
-      max-width: 87.5rem;
+      max-width: 90rem;
     }
   }
   @media (width >= 96rem) {
@@ -1895,17 +1895,17 @@
       width: calc(var(--spacing) * 20);
     }
   }
-  @media (width >= 87.5rem) {
+  @media (width >= 90rem) {
     .xl\:max-w-\[464px\] {
       max-width: 464px;
     }
   }
-  @media (width >= 87.5rem) {
+  @media (width >= 90rem) {
     .xl\:\[--container-max-width\:92rem\] {
       --container-max-width: 92rem;
     }
   }
-  @media (width >= 87.5rem) {
+  @media (width >= 90rem) {
     .xl\:\[--container-padding-x\:6rem\] {
       --container-padding-x: 6rem;
     }
@@ -1959,12 +1959,12 @@
     --container-padding-x: 3rem;
   }
 }
-@media (width >= 87.5rem) {
+@media (width >= 90rem) {
   .container {
     --container-max-width: 92rem;
   }
 }
-@media (width >= 87.5rem) {
+@media (width >= 90rem) {
   .container {
     --container-padding-x: 6rem;
   }
@@ -2871,7 +2871,7 @@
     max-width: 352px;
     gap: calc(var(--spacing) * 6);
   }
-  @media (width >= 87.5rem) {
+  @media (width >= 90rem) {
     .login__body-content {
       max-width: 464px;
     }
